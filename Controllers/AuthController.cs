@@ -44,6 +44,7 @@ namespace blogging_platform_api.Controllers
             var newUser = new User
             {
                 CreatedDateAt = DateTime.Now,
+                Username = user.Username,
                 Email = user.Email,
                 PasswordHash = _hasher.HashPassword(user, user.Password)
             };
